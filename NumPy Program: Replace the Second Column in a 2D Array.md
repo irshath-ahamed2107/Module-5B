@@ -1,48 +1,30 @@
-# 🧪 Pandas Program: Join Two DataFrames Along Rows
+# NumPy Program: Replace the Second Column in a 2D Array
 
-## 🎯 AIM
+## 🎯 Aim
+To write a *NumPy* program that deletes the second column from a given 2D array and inserts a new column at the same position.
 
-To write a Python program using Pandas to *join two DataFrames along rows* (row-wise concatenation) and assign all data to a new DataFrame.
+## 🧠 Algorithm
+1. *Import NumPy*: Start by importing the NumPy library.
+2. *Get Input*: Get a 2D NumPy array and a new column (as another array) from the user.
+3. *Delete Column*: Use np.delete() to remove the second column (index 1) from the original array.
+4. *Insert Column*: Use np.insert() to insert the new column at the second column's original position.
+5. *Display Result*: Print the updated array with the replaced column.
 
----
-
-## 🧠 ALGORITHM
-
-1. *Import Libraries*: Import the pandas library.
-2. *Create First DataFrame*: Use a dictionary to create student_data1.
-3. *Create Second DataFrame*: Use another dictionary to create student_data2.
-4. *Concatenate DataFrames*: Use pd.concat() with axis=0 to concatenate both DataFrames row-wise.
-5. *Display Result*: Print the new combined DataFrame.
-
----
-
-## 💻 Program
+## 🧾 Program:
 ```
-
-import pandas as pd
-df1=pd.DataFrame({
-    's_id':['S1','S2','S3','S4','S5'],
-    'name':['Dan','Ryder','Bryce','Bernal','Kwame'],
-    'marks':[200, 210, 190, 222,199]
-})
-df2=pd.DataFrame({
-    's_id':['S4','S5','S6','S7','S8'],
-    'name':['Scart','Willy','Dani','Kaise','Madeeha'],
-    'marks':[201,200,198,219,201]
-})
-res=pd.concat([df1,df2],axis=0)
-print("Original DataFrames:")
-print(df1)
-print("-------------------------------------")
-print(df2)
-print()
-print("Join the said two dataframes along rows:")
-print(res)
+import numpy as np  
+a=np.array(eval(input())) 
+b=np.array(eval(input())) 
+print("Printing Original array") 
+print(a) 
+print("Array after deleting column 2 on axis 1") 
+c=np.delete(a,1,axis=1)  
+print(c) 
+print("Array after inserting column 2 on axis 1") 
+print(np.insert(c,1,b,axis=1))
 ```
+## Output:
+<img width="744" height="218" alt="483892296-03bdf412-acb9-423d-bcad-9e83d6b9db91" src="https://github.com/user-attachments/assets/ed874740-2d5d-41ca-b09b-89d3655d6305" />
 
-## Output
-![WhatsApp Image 2025-10-19 at 20 15 44_dd318762](https://github.com/user-attachments/assets/c6a92bd3-519d-4d9b-b166-08d1702aa609)
-
-
-## Result
-The program successfully *join two DataFrames along rows* (row-wise concatenation) and assign all data to a new DataFrame.
+## Result:
+The program has been executed successfully.
